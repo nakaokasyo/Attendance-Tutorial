@@ -6,8 +6,9 @@
   <div class="row">
     <div class="col-md-3 col-md-offset-8">
     <%= form_tag(users_path, method: :get) do %>
+      <%= label_tag(:search, "ユーザー名検索") %>
       <div class="input-group">
-       <%= text_field_tag :search ,'',class: "form-control",placeholder: "ユーザー検索" %>
+       <%= text_field_tag :search ,'',class: "form-control",placeholder: "キーワードを入力..." %>
         <span class="input-group-btn">
          <%= submit_tag '検索', :name => nil,class: "btn btn-primary"  %>
         </span>
